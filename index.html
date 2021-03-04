@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Github commit</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css">
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; font-weight: bold;">
+            COUNT GIT COMMIT
+        </h1>
+
+        <form id="count" autocomplete="off">
+            <div class="form-group">
+                <input placeholder="Repository path" type="text" class="form-control" id="repo">
+            </div>
+
+            <div class="form-group">
+                <input placeholder="username" type="text" class="form-control" id="username">
+            </div>
+
+
+
+            <div class='col-md-5'>
+                <div class="form-group" style="display: flex; flex-direction: row;">
+                    <p>From: </p>
+                    <input type='date' class="form-control" id="from" style="margin-left: 20%" />
+                </div>
+
+            </div>
+            <div class='col-md-5' style="margin-left: 15%">
+                <div class="form-group" style="display: flex; flex-direction: row;">
+                    <p>To: </p>
+                    <input type='date' class="form-control" id="to" style="margin-left: 20%"/>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <button class="btn btn-danger btn-block" type="submit">submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="result-form" style="margin-left: 19%; margin-right: 19%;">
+        <div class="alert alert-success" style="text-align: center">
+            <div>
+                <p>Result:</p>
+            </div>
+            <p id="result"> </p>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"> </script>
+
+</html>
