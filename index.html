@@ -18,6 +18,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var wrapper = $(".repo_list");
+            var add_button = $(".add_form_field");
+            var x = 1;
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                x++;
+                $(wrapper).append(`<div><input placeholder='Repository path' type='text' class='form-control repo' id='repo${x}'/><a href='#' class='delete'>Delete</a></div>`); 
+            });
+
+            $(wrapper).on("click", ".delete", function (e) {
+                e.preventDefault(); $(this).parent('div').remove(); x--;
+            })
+        });
+    </script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -39,8 +56,10 @@
         </h1>
 
         <form id="count" autocomplete="off">
-            <div class="form-group">
-                <input placeholder="Repository path" type="text" class="form-control" id="repo">
+            <div class="repo_list" id="repo_list">
+                <button class="add_form_field" style="margin-bottom: 1%;">Add New Repo &nbsp; <span style="font-size:16px; font-weight:bold;">+
+                    </span>
+                </button>
             </div>
 
             <div class="form-group">
@@ -59,7 +78,7 @@
             <div class='col-md-5' style="margin-left: 15%">
                 <div class="form-group" style="display: flex; flex-direction: row;">
                     <p>To: </p>
-                    <input type='date' class="form-control" id="to" style="margin-left: 20%"/>
+                    <input type='date' class="form-control" id="to" style="margin-left: 20%" />
                 </div>
             </div>
 
